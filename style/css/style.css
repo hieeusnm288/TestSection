@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/optima");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -113,6 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #F7F7F8;
 }
 .featured-collection .features-card h2 {
   font-family: "Poppins";
@@ -149,6 +153,8 @@ body {
   text-align: left;
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
+  justify-content: space-between;
+  position: relative;
 }
 .featured-collection .features-card .features-list .feature-item span {
   font-family: "Poppins";
@@ -159,6 +165,24 @@ body {
   letter-spacing: -0.34px;
   color: #1e1e1e;
   width: 140px;
+}
+@media screen and (min-width: 1024px) {
+  .featured-collection .features-card .features-list {
+    gap: 0px !important;
+  }
+  .featured-collection .features-card .features-list .feature-item {
+    padding: 0 50px;
+  }
+  .featured-collection .features-card .features-list .feature-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 132px;
+    background: #e3d5cc;
+  }
 }
 .featured-collection .cta-card {
   height: 250px;
@@ -223,6 +247,40 @@ body {
 .chair-section .header-content {
   grid-area: header;
 }
+.chair-section .header-content .label {
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #402C22;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .chair-section .header-content .label {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+}
+.chair-section .header-content .main-title {
+  font-family: "Optima";
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: -1.32px;
+  color: #402C22;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .chair-section .header-content .main-title {
+    font-size: 63px;
+    line-height: 106%;
+    letter-spacing: -1.26px;
+    margin-top: 15px;
+  }
+}
 .chair-section .image-gallery {
   grid-area: images;
   display: flex;
@@ -251,18 +309,41 @@ body {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  font-family: "Optima nova LT Pro";
+  font-size: 19px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
 }
 .chair-section .details-accordion details summary::after {
   content: "+";
   font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .chair-section .details-accordion details summary {
+    font-size: 22px;
+    line-height: 122%;
+    letter-spacing: -0.44px;
+  }
 }
 .chair-section .details-accordion details[open] summary::after {
   content: "-";
 }
 .chair-section .details-accordion details .content {
   padding-bottom: 20px;
-  color: #666;
-  font-size: 14px;
+  color: #402C22;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  opacity: 0.75;
+  line-height: 22px;
+}
+@media screen and (min-width: 1024px) {
+  .chair-section .details-accordion details .content {
+    font-size: 16px;
+    line-height: 23px;
+  }
 }
 @media (min-width: 1024px) {
   .chair-section {
@@ -301,7 +382,7 @@ body {
   max-width: 1920px;
   background-color: #FFF9F5;
   padding-top: 32px;
-  padding-inline: 0px;
+  margin-inline: -10px;
   position: relative;
   padding-bottom: 75px;
 }
@@ -313,7 +394,7 @@ body {
 }
 .services-section .header-content .section-tagline {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Instrument Serif", serif;
   color: #462B20;
   font-style: italic;
   font-weight: 400;
@@ -337,7 +418,7 @@ body {
 }
 .services-section .services-content .servive-title {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Instrument Serif", serif;
   color: #462B20;
   font-size: 31px;
   font-weight: 400;
@@ -369,6 +450,7 @@ body {
   letter-spacing: 0;
   opacity: 0.6;
   cursor: pointer;
+  font-family: "Instrument Serif", serif;
 }
 .services-section .services-content .tab-list span:hover {
   opacity: 1;
