@@ -302,6 +302,7 @@ body {
   padding-top: 32px;
   padding-inline: 0px;
   position: relative;
+  padding-bottom: 75px;
 }
 .services-section .header-content {
   display: flex;
